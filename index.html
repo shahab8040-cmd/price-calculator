@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Calculator</title>
+</head>
+<body>
+
+<h1>Price Calculator</h1>
+<label>Enter Price:</label>
+<label>Tax Rate (%):</label>
+<input type="number" id="tax" value="13">
+<input type="number" id="price">
+<button onclick="calculate()">Calculate</button>
+<button>Clear</button>
+<p id="result"></p>
+<script
+function calculate() {
+    let price = parseFloat(document.getElementById("price").value);
+    let tax = parseFloat(document.getElementById("tax").value) / 100; 
+    let total = price + (price * tax); 
+   document.getElementById("result").innerText = "Total: $" + total.toFixed(2);  
+}
+
+
+</script>
+</body>
+</html>
